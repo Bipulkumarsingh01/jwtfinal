@@ -1,0 +1,18 @@
+version: "3.8"  # Use the appropriate version of Docker Compose
+
+services:
+  backend:
+    build:   # Build the backend service using the Dockerfile in the 'backend' folder
+      context: ./backend # Build the context service using the Dockerfile in the ''
+      dockerfile: Dockerfile # Build the
+    ports:
+      - "3001:3001"   # Map port 3001 of the host to port 3001 of the backend container
+    
+  frontend:
+    build: 
+      context: ./frontend  # Build the frontend service using the Dockerfile in the 'frontend' folder
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"   # Map port 3000 of the host to port 3000 of the frontend container
+
+  
